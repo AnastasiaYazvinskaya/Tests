@@ -1,0 +1,107 @@
+body {
+    margin: 5px 10%;
+    background-color: #bed3dd;
+}
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 80%;
+    text-align: center;
+}
+h1, h2, h3 {
+    text-align: center;
+}
+h1 .clicked:hover {
+    text-decoration: underline;
+}
+.clicked:hover {
+    cursor: pointer;
+}
+#items {
+    display: flex;
+    flex-wrap: wrap;
+}
+.item {
+    display: flex;
+    max-width: 400px;
+    width: 80%;
+    justify-content: center;
+    border-radius: 20px;
+    margin: 5px auto;
+    background-color: #e9c5a7;
+}
+.item:hover {
+    box-shadow: 0 0 20px #c06419;
+}
+.item h2 {
+    align-self: center;
+    margin: 0 auto;
+}
+.item img {
+    border-radius: 0 20px 20px 0;
+}
+
+
+#question{
+    border: 2px black solid;
+    background-color: rgb(255, 251, 240);
+    border-radius: 15px;
+    padding: 5px 10px;
+    max-width: 600px;
+}
+#right_result {
+    background-color: rgba(143, 223, 97, 0.596);
+    border-radius: 10px;
+}
+#wrong_result {
+    background-color: rgba(223, 97, 97, 0.596);
+    border-radius: 10px;
+}
+#no_result {
+    background-color: rgba(223, 183, 97, 0.596);
+    border-radius: 10px;
+}
+button, .button {
+    background-color: #7e7ee7;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px 0;
+    width: 100px;
+    text-align: center;
+}
+button:hover, .button:hover {
+    box-shadow: 0 0 5px #7e7ee7;
+    cursor: pointer;
+}
+input {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background-color: rgb(255, 251, 240);
+}
+.gap {
+    width: 70%;
+}
+select {
+    width: 60px;
+    margin-left: 5px;
+}
+table {
+    width: 100%;
+}
+table td {
+    margin: 0 auto;
+}
+#main-section {
+    position: relative;
+}
+#stage {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    margin-bottom: 0;
+}
+#help {
+    background-color: rgb(219, 167, 240);
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title id="title"></title>
+        <link rel="stylesheet" href="data/style.css">
+        <script type="text/javascript" src="data/test_data.js"></script>
+        <script type="text/javascript" src="data/question.js"></script>
+        <script type="text/javascript" src="data/answer.js"></script>
+        <script type="text/javascript" src="data/display.js"></script>
+    </head>
+    <body>
+        <h1><span id="main" class="clicked" onclick="showCourses()">Курс: </span><span id="course"></span></h1>
+        <h2><span id="test"></span></h2>
+        <div id="items"></div>
+        <div id="question" style="display: none;"></div>
+        <p id="test1"></p>
+    </body>
+    <script>
+        showCourses();
+        document.getElementById('title').innerHTML = "Выбор курса";
+    </script>
+</html>
