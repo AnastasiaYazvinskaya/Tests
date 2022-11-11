@@ -32,20 +32,20 @@ function singleChooseCheck(n) {
 function multiChooseCheck(n) {
     clearResult();
     var checkbox = document.getElementsByName('answer');
-    var cor_answer = data[order[n]].answers.length;
-    var answer = data[order[n]].answers.length;
+    var cor_answer = question[order[n]].answers.length;
+    var answer = question[order[n]].answers.length;
     for (let i=0; i < checkbox.length; i++) {
         if (checkbox[i].checked) {
             answer--;
-            for (let j=0; j<data[order[n]].answers.length; j++) {
-                if (data[order[n]].answers[j].includes(checkbox[i].value)) {
+            for (let j=0; j<question[order[n]].answers.length; j++) {
+                if (question[order[n]].answers[j].includes(checkbox[i].value)) {
                     cor_answer--;
                 }
             }
-            result(n, cor_answer, data[order[n]].answers.length);
+            result(n, cor_answer, question[order[n]].answers.length);
         }
     }
-    if (answer == data[order[n]].answers.length) {
+    if (answer == question[order[n]].answers.length) {
         clearResult();
         nr.innerHTML = "Выберите ответ";
         nr.style.padding = "5px";
@@ -55,16 +55,16 @@ function textInputCheck(n) {
     clearResult();
     var input = document.getElementsByName('answer');
     var cor_answer = 1;
-    var answer = data[order[n]].answers.length;
+    var answer = question[order[n]].answers.length;
 
     if (input[0].value != '') {
         answer--;
-        if (data[order[n]].answers[0].includes(input[0].value)) {
+        if (question[order[n]].answers[0].includes(input[0].value)) {
             cor_answer--;
         }
         result(n, cor_answer);
     }
-    if (answer == data[order[n]].answers.length) {
+    if (answer == question[order[n]].answers.length) {
         nr.innerHTML = "Введите ответ";
         nr.style.padding = "5px";
     }
@@ -72,12 +72,12 @@ function textInputCheck(n) {
 function fillGapCheck(n) {
     clearResult();
     var input = document.getElementsByName('answer');
-    var cor_answer = data[order[n]].answers.length;
+    var cor_answer = question[order[n]].answers.length;
     var answer = 0;
     for (let i=0; i < input.length; i++) {
         if (input[i].value != '') {
             answer++;
-            if (data[order[n]].answers[i].includes(input[i].value)) {
+            if (question[order[n]].answers[i].includes(input[i].value)) {
                 cor_answer--;
             }
             result(n, cor_answer);
@@ -91,18 +91,18 @@ function fillGapCheck(n) {
 function relationCheck(n) {
     clearResult();
     var input = document.getElementsByName('answer');
-    var cor_answer = data[order[n]].answers[0].length;
-    var answer = data[order[n]].answers[0].length;
+    var cor_answer = question[order[n]].answers[0].length;
+    var answer = question[order[n]].answers[0].length;
     for (let i=0; i < input.length; i++) {
         if (input[i].value != '') {
             answer--;
-            if (data[order[n]].answers[0][i] == input[i].value) {
+            if (question[order[n]].answers[0][i] == input[i].value) {
                 cor_answer--;
             }
-            result(n, cor_answer, data[order[n]].answers[0].length);
+            result(n, cor_answer, question[order[n]].answers[0].length);
         }
     }
-    if (answer == data[order[n]].answers[0].length) {
+    if (answer == question[order[n]].answers[0].length) {
         nr.innerHTML = "Введите ответ";
         nr.style.padding = "5px";
     }

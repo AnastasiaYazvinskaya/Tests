@@ -46,14 +46,14 @@ data = {
                         "question7": {
                             "type": "singleChoose",
                             "question_text": "Какой результат выполнения данной программы?<br><br>print(int('3') + 3)",
-                            "answers": [["Ошибка"]],
+                            "answers": [["6"]],
                             "options": ["Ошибка", "6", "33"]
                         },
                         "question8": {
                             "type": "singleChoose",
                             "question_text": "Какой результат выполнения данной программы?<br><br>b = 'a' + 'b'<br>print(b)",
-                            "answers": [["Ошибка"]],
-                            "options": ["Ошибка", "6", "33"]
+                            "answers": [["ab"]],
+                            "options": ["Ошибка", "b", "ab", "a"]
                         },
                         "question9": {
                             "type": "singleChoose",
@@ -75,35 +75,29 @@ data = {
                         },
                         "question12": {
                             "type": "singleChoose",
-                            "question_text": "Какой результат выполнения данной программы?<br><br>print(int('3') + 3)",
-                            "answers": [["Ошибка"]],
-                            "options": ["Ошибка", "6", "33"]
-                        },
-                        "question13": {
-                            "type": "singleChoose",
                             "question_text": "Какой результат выполнения данной программы?<br><br>a = str(2 * 2) * 2<br>print(a)",
                             "answers": [["44"]],
                             "options": ["Ошибка", "22", "44", "2222"]
                         },
-                        "question14": {
+                        "question13": {
                             "type": "singleChoose",
                             "question_text": "Какой результат выполнения данной программы?<br><br>b = 'str' * 0<br>print(b)",
                             "answers": [["Ничего"]],
                             "options": ["Ошибка", "str", "Ничего", "0"]
                         },
-                        "question15": {
+                        "question14": {
                             "type": "singleChoose",
                             "question_text": "Какой результат выполнения данной программы?<br><br>d = 'apple'<br>print(len(set(d)))",
                             "answers": [["4"]],
                             "options": ["Ошибка", "aple", "4", "Ничего"]
                         },
-                        "question16": {
+                        "question15": {
                             "type": "multiChoose",
                             "question_text": "Как сделать перенос строки? (В данных вариантах использованы одинарные ковычки)",
-                            "answers": [["'Первая строка\\nВторая строка'"], ["'''Первая строка\nВторая строка'''"]],
-                            "options": ["'Первая строка\\nВторая строка'", "'''Первая строка\nВторая строка'''", "'Первая строка\nВторая строка'", "'Первая строка\\nextВторая строка'"]
+                            "answers": [["'Первая строка\\nВторая строка'"], ["'''Первая строка<br>Вторая строка'''"]],
+                            "options": ["'Первая строка\\nВторая строка'", "'''Первая строка<br>Вторая строка'''", "'Первая строка<br>Вторая строка'", "'Первая строка\\nextВторая строка'"]
                         },
-                        "question17": {
+                        "question16": {
                             "type": "relation",
                             "question_text": "Соотнесите название метода и её определение",
                             "answers": [["str.capitalize()", "str.count(sub)", "str.find(sub)", 
@@ -124,7 +118,7 @@ data = {
                                         "Проверяет если строка не пустая и все символы находятся в нижнем регистре",
                                         "Проверяет если строка не пустая и все символы находятся в верхнем регистре"]
                         },
-                        "question18": {
+                        "question17": {
                             "type": "relation",
                             "question_text": "Соотнесите название метода и её определение",
                             "answers": [["str.capitalize()", "str.count(sub)", "str.find(sub)", 
