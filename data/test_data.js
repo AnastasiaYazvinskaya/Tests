@@ -12,7 +12,7 @@ data = {
                             "question_text": "Какая функция используется для ввода информации?",
                             "answers": [["input"]],
                             "options": ["print", "input"]
-                        }/*,
+                        },
                         "question2": {
                             "type": "singleChoose",
                             "question_text": "Какая функция используется для вывода информации?",
@@ -150,7 +150,7 @@ data = {
                             "question_text": "Что выведет данная программа?<br><br>x = 7<br>y = x + 3<br>y = str(y) + '0'<br>print(y)",
                             "answers": [["100"]],
                             "options": []
-                        }*/
+                        }
                     }
                 }
             }
