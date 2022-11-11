@@ -48,6 +48,7 @@ h1 .clicked:hover {
     border-radius: 15px;
     padding: 5px 10px;
     max-width: 600px;
+    margin: 0 auto;
 }
 #right_result {
     background-color: rgba(143, 223, 97, 0.596);
