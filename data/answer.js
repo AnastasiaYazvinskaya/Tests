@@ -21,12 +21,13 @@ function singleChooseCheck(n) {
             if (question[order[n]].answers[0].includes(radio[i].value)) {
                 cor_answer--;
             }
-            result(n, cor_answer);
         }
     }
     if (answer == question[order[n]].answers[0].length) {
         nr.innerHTML = "Выберите ответ";
         nr.style.padding = "5px";
+    } else {
+        result(n, cor_answer);
     }
 }
 function multiChooseCheck(n) {
@@ -42,13 +43,14 @@ function multiChooseCheck(n) {
                     cor_answer--;
                 }
             }
-            result(n, cor_answer, question[order[n]].answers.length);
         }
     }
     if (answer == question[order[n]].answers.length) {
         clearResult();
         nr.innerHTML = "Выберите ответ";
         nr.style.padding = "5px";
+    } else {
+        result(n, cor_answer, question[order[n]].answers.length);
     }
 }
 function textInputCheck(n) {
@@ -62,11 +64,12 @@ function textInputCheck(n) {
         if (question[order[n]].answers[0].includes(input[0].value)) {
             cor_answer--;
         }
-        result(n, cor_answer);
     }
     if (answer == question[order[n]].answers.length) {
         nr.innerHTML = "Введите ответ";
         nr.style.padding = "5px";
+    } else {
+        result(n, cor_answer);
     }
 }
 function fillGapCheck(n) {
@@ -80,12 +83,13 @@ function fillGapCheck(n) {
             if (question[order[n]].answers[i].includes(input[i].value)) {
                 cor_answer--;
             }
-            result(n, cor_answer);
         }
     }
     if (answer == 0) {
         nr.innerHTML = "Введите ответ";
         nr.style.padding = "5px";
+    } else {
+        result(n, cor_answer);
     }
 }
 function relationCheck(n) {
@@ -99,12 +103,13 @@ function relationCheck(n) {
             if (question[order[n]].answers[0][i] == input[i].value) {
                 cor_answer--;
             }
-            result(n, cor_answer, question[order[n]].answers[0].length);
         }
     }
     if (answer == question[order[n]].answers[0].length) {
         nr.innerHTML = "Введите ответ";
         nr.style.padding = "5px";
+    } else {
+        result(n, cor_answer, question[order[n]].answers[0].length);
     }
 }
 
@@ -132,6 +137,7 @@ function result(n, cor_answer, answers_num=1) {
         wr.innerHTML = "Ответ неверный";
         wr.style.padding = "5px";
     }
+    document.getElementById('help').style.display = 'block';
 }
 
 function checkAnswer(n) {

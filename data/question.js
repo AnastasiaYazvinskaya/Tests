@@ -122,6 +122,7 @@ function showQuestion(n) {
     clearResult();
     document.getElementById('current').innerHTML = n+1;
     document.getElementById('next').style.display = 'none';
+    document.getElementById('help').style.display = 'none';
     document.getElementById('check').style.display = 'block';
     document.getElementById('help-info').style.display = 'none';
     
@@ -158,10 +159,10 @@ function questBody(n) {
         <div id="right_result"></div>\
         <div id="wrong_result"></div>\
         <div id="no_result"></div>\
+        <div style="display: flex;">\
         <button id="check" type="button" onclick="checkAnswer(${n})">Проверить</button>\
         <button id="finish" type="button" onclick="showTests('${course}')" style="display: none;">Завершить</button>\
-        <div id="next" style="display: flex;">\
-            <button type="button" onclick="nextQuestion(${n+1})">Далее</button>\
+            <button id="next" type="button" onclick="nextQuestion(${n+1})">Далее</button>\
             <button id="help" type="button" onclick="help(${n})">Пояснение</button>\
         </div>\
         <p id="stage"><span id="current"></span>/<span id="total"></span></p>\

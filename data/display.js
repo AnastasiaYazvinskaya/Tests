@@ -37,11 +37,11 @@ function showTest(t) {
     //document.getElementById('test1').innerHTML = test;
     document.getElementById('items').innerHTML = '';
     document.getElementById('test').innerHTML = data.courses[course].tests[test].name;
-    order = Object.keys(data.courses[course].tests[test].questions);
+    order = Object.keys(data.courses[course].tests[test].questions).slice(0,10);
     shuffle(order);
     question = data.courses[course].tests[test].questions;
     document.getElementById('question').innerHTML += (`\
-    <p>fjnjkg</p>\
+    <p>Данный тест является обучающим. Это значит, что вы можете проверить свои знания, а так же если задача вызвала затруднения, вы можете посмотреть пояснение к текущему вопросу и разобраться с темой.<br><br>10 вопросов рандомно выбраны из банка.</p>\
     <button type="button" onclick="nextQuestion(0)">Начать</button>\
     `);
     document.getElementById('question').style.display = 'block';

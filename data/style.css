@@ -70,6 +70,7 @@ button, .button {
     margin: 10px 0;
     width: 100px;
     text-align: center;
+    margin-right: 10px;
 }
 button:hover, .button:hover {
     box-shadow: 0 0 5px #7e7ee7;
@@ -101,7 +102,6 @@ table td {
     position: absolute;
     right: 20px;
     bottom: 0;
-    margin-bottom: 0;
 }
 #help {
     background-color: rgb(219, 167, 240);
